@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>GENERAL INFORMATION</title>
+</head>
+<style type="text/css">
+	body{
+	font-family: Roboto;
+	background-color: #bdc3c7;
+	margin-left:100px; 
+}
+</style>
+<body>
+	<h1> General Information</h1>
+	<centre><form name="form" action="form.php" method="post" onsubmit="return validateForm()
+	" >
+<label><h3>Firstname&nbsp;:</label><input type="textbox" name="Firstname" required="please type name"></h3>
+<label><h3>Lastname&nbsp;:</label><input type="textbox" name="lastname" required="please type name"></h3>
+
+<h3><label>Gender&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:</label><label>Male</label><input type="radio" name="gender" value="Male">Female</label><input type="radio" name="gender" value="Female"></h3>
+<h3><label>Fathers's Name&nbsp;&nbsp;&nbsp;&nbsp;:</label><input type="text" name="fname" required="please type name"></h3>
+<h3><label>Mother's Name&nbsp;&nbsp;&nbsp;&nbsp;:</label><input type="text" name="mname" required="please type name"></h3>
+
+
+<h3><label>State&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:</label>
+<select name="state" >
+	<option value="0">Select</option>
+<option value="Andhra Pradesh">Andhra Pradesh</option>
+<option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands</option>
+<option value="Arunachal Pradesh">Arunachal Pradesh</option>
+<option value="Assam">Assam</option>
+<option value="Bihar">Bihar</option>
+<option value="Chandigarh">Chandigarh</option>
+<option value="Chhattisgarh">Chhattisgarh</option>
+<option value="Dadar and Nagar Haveli">Dadar and Nagar Haveli</option>
+<option value="Daman and Diu">Daman and Diu</option>
+<option value="Delhi">Delhi</option>
+<option value="Lakshadweep">Lakshadweep</option>
+<option value="Puducherry">Puducherry</option>
+<option value="Goa">Goa</option>
+<option value="Gujarat">Gujarat</option>
+<option value="Haryana">Haryana</option>
+<option value="Himachal Pradesh">Himachal Pradesh</option>
+<option value="Jammu and Kashmir">Jammu and Kashmir</option>
+<option value="Jharkhand">Jharkhand</option>
+<option value="Karnataka">Karnataka</option>
+<option value="Kerala">Kerala</option>
+<option value="Madhya Pradesh">Madhya Pradesh</option>
+<option value="Maharashtra">Maharashtra</option>
+<option value="Manipur">Manipur</option>
+<option value="Meghalaya">Meghalaya</option>
+<option value="Mizoram">Mizoram</option>
+<option value="Nagaland">Nagaland</option>
+<option value="Odisha">Odisha</option>
+<option value="Punjab">Punjab</option>
+<option value="Rajasthan">Rajasthan</option>
+<option value="Sikkim">Sikkim</option>
+<option value="Tamil Nadu">Tamil Nadu</option>
+<option value="Telangana">Telangana</option>
+<option value="Tripura">Tripura</option>
+<option value="Uttar Pradesh">Uttar Pradesh</option>
+<option value="Uttarakhand">Uttarakhand</option>
+<option value="West Bengal">West Bengal</option>
+</select></h3>
+<h3><label>City&nbsp;&nbsp;&nbsp;&nbsp;:</label><input type="text" name="city" required=""></h3>
+<h3><label>E-mail Id:</label><input type="textbox" name="E-mail"></h3>
+	<h3><label><input type="checkbox" name="agree" required="">I here by declare that all the information provided above are correct with my best knowledge</label></h3>
+	<input type="submit" >
+	</form></center>
+	<script type="text/javascript">
+		function validateForm() {
+  var text = document.forms["form"]["Firstname"].value;
+  if (text == "") {
+    alert("Name must be correct");
+    return false;
+  }
+ var expression = /^[a-zA-Z]+$/;
+  if(expression.test(text)==false){
+alert("Enter a valid name ");
+return false;
+}
+  text = document.forms["form"]["lastname"].value;
+  if (text == "" ) {
+    alert("Name must be correct");
+    return false;
+  }
+  if(expression.test(text)==false){
+alert("Enter a valid name ");
+return false;}
+text = document.forms["form"]["fname"].value;
+  if (text == "" ) {
+    alert("Name must be correct");
+    return false;
+  }
+  if(expression.test(text)==false){
+alert("Enter a valid name ");
+return false;}
+text = document.forms["form"]["mname"].value;
+  if (text == "" ) {
+    alert("Name must be correct");
+    return false;
+  }
+  if(expression.test(text)==false){
+alert("Enter a valid name ");
+return false;}
+text = document.forms["form"]["city"].value;
+  if (text == "" ) {
+    alert("City name must be correct");
+    return false;
+  }
+  if(expression.test(text)==false){
+alert("Enter a valid  City name ");
+return false;}
+
+
+text = document.forms["form"]["number"].value;
+  if (x == "" ) {
+    alert(" Enter contact number");
+    return false;
+  }
+  var emailexp=/^[0-9]+$/;
+  if(emailexp.test(text)==false){
+alert("Enter a valid number ");
+return false;
+}
+if(x.length!==10)
+{ 
+	alert("number must be of 10 digit");
+	return false;
+}
+var r= /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+
+text = document.forms["form"]["E-mail"].value;
+ if(r.test(x)==false){
+alert("Enter a valid E-mail ");
+return false;
+}
+text = document.forms["form"]["state"].value;
+ if(x===0 || x===''){
+alert("Select the state");
+return false;
+}
+
+text= document.forms["form"]["gender"].value;
+ if(text===0 || text===''){
+alert("Select the gender");
+return false;
+}
+
+  
+}
+	</script>
+</body>
+</html>
